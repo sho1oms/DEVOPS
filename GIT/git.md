@@ -12,9 +12,9 @@ https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/
 Unable to git clone via ssh method.
 1. Remove origin:
 <p align="left">
-  <img src="./screens/3.jpg" width="500" title="Problem solved">
+  <img src="./screens/3.JPG" width="500" title="Problem solved">
   <p align="left">
-  <img src="./screens/2.jpg" width="500" title="Problem solved">
+  <img src="./screens/2.JPG" width="500" title="Problem solved">
 </p>
 
 Problem SOLVED:
@@ -38,10 +38,16 @@ git push --set-upstream origin new-feature
 
 
 <p align="left">
-  <img src="./screens/4.jpg" width="500" title="Problem solved">
+  <img src="./screens/4.JPG" width="500" title="Problem solved">
 </p>
 
+Check if git is pushed to origin master after merge.
 
+if there will be problem
+
+```
+git push -f 
+```
 ### List existing remotes
 ```
 $ git remote -v
