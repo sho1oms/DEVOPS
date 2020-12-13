@@ -1,4 +1,19 @@
 
+## Configuration ssh keys git
+
+https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+
+1. ssh-keygen -t rsa -b 4096 -C "piotrsobczak.wro@gmail.com
+2. cat  ~/.ssh/id_rsa.pub
+3. ssh-add ~/.ssh/id_rsa
+4. eval $(ssh-agent -s)
+
+Problem SOLVED:
+<p align="left">
+  <img src="./screens/1.JPG" width="500" title="Problem solved">
+</p>
+
 ### List existing remotes
 ```
 $ git remote -v
