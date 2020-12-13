@@ -32,6 +32,15 @@ git push --set-upstream origin new-feature
 ```
 
 
+## GIT scenario
+
+### syncro main with feture branch
+
+
+<p align="left">
+  <img src="./screens/4.jpg" width="500" title="Problem solved">
+</p>
+
 
 ### List existing remotes
 ```
@@ -89,3 +98,4 @@ git push --delete origin new-feature
 # Delete remote branch v2.8.0+
 git push -d origin new-feature
 ```
+
