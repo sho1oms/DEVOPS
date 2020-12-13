@@ -22,6 +22,17 @@ Problem SOLVED:
   <img src="./screens/1.jpg" width="500" title="Problem solved">
 </p>
 
+
+## BASIC commands
+
+```
+# New branch on origin
+git push --set-upstream origin new-feature
+
+```
+
+
+
 ### List existing remotes
 ```
 $ git remote -v
@@ -54,10 +65,27 @@ Not recommeneded way to follow.
 * Usefull for knowing that feature have been incorporated
 * Usefull for cleanup after merging many features
 
-
 $ git branch --merged
 
 $ git branch --no-merged
 
 ### Delete local and remote branch
 
+Delete branch LOCAL
+```
+# Delete branch - LOCAL
+git branch -d new-feature
+
+# Delete no merged branch - LOCAL
+git branch -d new-feature
+```
+
+Delete branch - REMOTE
+
+```
+# Delete remote branch v1.7.0+
+git push --delete origin new-feature
+
+# Delete remote branch v2.8.0+
+git push -d origin new-feature
+```
