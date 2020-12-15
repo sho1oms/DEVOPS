@@ -105,3 +105,49 @@ git push --delete origin new-feature
 git push -d origin new-feature
 ```
 
+### Prune stale branches
+
+
+## Create tags
+
+* Tags allow marking points in history as important
+* A named reference to a commit
+* most often used to mark releases v1.0.0 etc
+
+```
+# Add lightweight tag
+git tag issue136 <commit id>
+
+# Add annotated tag (most common)
+
+git tag -a v1.1 -m "Version 1.0" <commit id>
+
+# List tag
+
+git tag
+
+git tag --list
+git tag -l
+
+# List tags beggining with "v2"
+git tag -l "v2*"
+
+# List tags with annotations
+
+git show v1.1
+git diff v1.1 v1.2
+
+# Delete tags
+
+git tag --delete v1.2
+git tag -d v1.2
+
+# Push tags to remote
+git push origin
+git push --tags
+
+# Checkout branch tags 
+git checkut -b new_branch v1.1
+git checkout v1.1
+
+```
