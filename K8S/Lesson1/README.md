@@ -80,4 +80,25 @@ spec:
 ```
 
 ## Rollback upgrade
+
+```
+
+# Record true - to save in list # kubectl rollout history deployment httpd-dep   
+
 kubectl set image deployment httpd-dep httpd=httpd:2.4 --record=true
+
+Revert deployment
+kubectl rollout history deployment httpd-dep    
+deployment.apps/httpd-dep
+REVISION  CHANGE-CAUSE
+1         <none>
+2         kubectl.exe set image deployment httpd-dep httpd=httpd:2.4 --record=true
+
+
+kubectl rollout undo deployment httpd-dep       
+deployment.apps/httpd-dep rolled back
+
+
+Status of rollout
+kubectl rollout status deployment httpd-dep
+```
