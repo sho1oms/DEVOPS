@@ -101,4 +101,12 @@ deployment.apps/httpd-dep rolled back
 
 Status of rollout
 kubectl rollout status deployment httpd-dep
+
+Scale deployment
+
+kubectl scale --replicas=0 deployment httpd-dep
+
+Delete Deployment
+
+kubectl delete httpd-dep
 ```
