@@ -78,3 +78,6 @@ spec:
     limits.cpu: "2"
     limits.memory: 2Gi
 ```
+
+## Rollback upgrade
+kubectl set image deployment httpd-dep httpd=httpd:2.4 --record=true
