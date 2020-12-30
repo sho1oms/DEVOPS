@@ -1,25 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-dep
+  name: my-web
   labels:
-    app: httpd-app
+    app: nginx
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: httpd-app
+      app: nginx
   template:
     metadata:
       labels:
-        app: httpd-app
+        app: nginx
     spec:
+      initContainers:
+      - name: clean-and-download
+        image: busybox
+        command: ["sh","-c","cat https://raw.githubusercontent.com/sho1oms/DEVOPS/main/K8S/Lesson1/index.html > /www/ "]
       containers:
-      - name: httpd
-        image: httpd
+      - name: hosting
+        image: nginx
+        volumeMounts:
+          - name: http-content
+            mountPath: /usr/share/nginx/html
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        ports:
-        - containerPort: 80
+      volumes:
+      - name: http-content
+        hostPath: /tmp/www-content
+        type: DirectoryOrCreate

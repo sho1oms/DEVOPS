@@ -116,3 +116,9 @@ kubectl delete httpd-dep
 ```
 kubectl completion --help
 ```
+# Information about cluster
+```
+kubectl api-resources
+
+kubectl api-versions
+```
