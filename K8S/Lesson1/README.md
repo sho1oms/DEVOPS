@@ -110,3 +110,9 @@ Delete Deployment
 
 kubectl delete httpd-dep
 ```
+
+#AutoComplition in kubectl
+
+```
+kubectl completion --help
+```
