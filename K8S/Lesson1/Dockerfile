@@ -1,2 +1,3 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM alpine
+ENV STAGE="dev"
+CMD: echo $(STAGE)
